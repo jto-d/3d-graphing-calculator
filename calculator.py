@@ -17,23 +17,19 @@ ax.set_xlim(x_min, x_max)
 ax.set_ylim(y_min, y_max)
 ax.set_zlim(z_min, z_max)
 
+
+# 4 = z^2 + x^2 + y^2
+
 # # plot the z-axis
-# zline = np.linspace(z_min*2, z_max*2, 1000)
-# xline = np.full((1,1000),0)[0]
-# yline = np.full((1,1000),0)[0]
-# ax.plot(xline, yline, zline, 'black')
+zline = np.linspace(-2, 2, 1000)
 
-# # plot the y-axis
-# zline = np.full((1,1000),0)[0]
-# xline = np.full((1,1000),0)[0]
-# yline = np.linspace(y_min*2, y_max*2, 1000)
-# ax.plot(xline, yline, zline, 'black')
+print (zline)
 
-# # plot the x-axis
-# zline = np.full((1,1000),0)[0]
-# xline = np.linspace(x_min*2, x_max*2, 1000)
-# yline = np.full((1,1000),0)[0]
-# ax.plot(xline, yline, zline, 'black')
+for i in zline:
+    r = 4 - i*i
+# xline = 
+# yline = zline*zline
 
+# ax.plot(xline,yline,zline)
 
-plt.show()
+# plt.show()
