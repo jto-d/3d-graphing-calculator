@@ -1,5 +1,6 @@
 import matplotlib
 from mpl_toolkits.mplot3d import Axes3D
+from Equation import Equation
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -17,19 +18,11 @@ ax.set_xlim(x_min, x_max)
 ax.set_ylim(y_min, y_max)
 ax.set_zlim(z_min, z_max)
 
+e = Equation("4*x+x^2+4*x^3+y^2+y")
+e.get_z_coords(x_min, x_max, y_min, y_max, z_min, z_max)
 
-# 4 = z^2 + x^2 + y^2
+ax.plot(e.x_coords, e.y_coords, e.z_coords, 'black', alpha=0.2)
 
-# # plot the z-axis
-zline = np.linspace(-2, 2, 1000)
 
-print (zline)
 
-for i in zline:
-    r = 4 - i*i
-# xline = 
-# yline = zline*zline
-
-# ax.plot(xline,yline,zline)
-
-# plt.show()
+plt.show()
